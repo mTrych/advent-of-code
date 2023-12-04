@@ -12,7 +12,6 @@ def main(input_file: str):
             line = line.strip()
             card, nums = line.split(":")
             card_id = int(re.sub(" +", ",", card).split(",")[1])
-            # card_id = int(card.strip().split(" ")[1])
             if scratchcards.get(card_id):
                 scratchcards[card_id] += 1
 
@@ -42,5 +41,5 @@ def main(input_file: str):
 
 
 if __name__ == "__main__":
-    # main(SHORT)
+    main(SHORT)
     main(LONG)
